@@ -2,6 +2,7 @@ backend:
   name: github
   repo: vaani68/sriaara
   branch: main
+  auth_endpoint: https://sriaara.netlify.app/admin/auth
 
 media_folder: "public/images"
 public_folder: "/images"
