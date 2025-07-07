@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: vaani68/sriaara
   branch: main
 
 media_folder: "public/images"
