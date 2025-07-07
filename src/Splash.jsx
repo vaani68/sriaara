@@ -2,11 +2,11 @@ import React from 'react';
 
 function Splash() {
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-white p-4">
+    <div className="fixed inset-0 bg-white flex items-center justify-center">
       <img
         src="/logo.png"
         alt="Sriaara Logo"
-        className="max-h-[60vh] max-w-[80vw] object-contain"
+        className="object-contain max-w-[90%] max-h-[90%]"
       />
     </div>
   );
