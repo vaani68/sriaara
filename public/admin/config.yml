@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "sarees"
+    label: "Sarees"
+    folder: "content/sarees"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Available", name: "isAvailable", widget: "boolean" }
+
+  - name: "dresses"
+    label: "Dress Materials"
+    folder: "content/dresses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Available", name: "isAvailable", widget: "boolean" }
+
+  - name: "sale"
+    label: "Sale"
+    folder: "content/sale"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Price", name: "price", widget: "number" }
+      - { label: "Available", name: "isAvailable", widget: "boolean" }
