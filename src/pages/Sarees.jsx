@@ -12,8 +12,8 @@ function Sarees() {
       const entries = await Promise.all(
         Object.entries(imports).map(async ([path, load]) => {
           const raw = await load();
-          const { data, content } = matter(raw);
-          return { ...data, description: content };
+          const { data } = matter(raw);
+          return data;
         })
       );
 
@@ -40,10 +40,9 @@ function Sarees() {
               className="w-full rounded-lg mb-4"
             />
             <h2 className="text-xl font-semibold">{saree.title}</h2>
-            <p className="text-gray-700 mb-1">{saree.price}</p>
-            <p className="text-gray-600 mb-2">{saree.description}</p>
+            <p className="text-gray-700 mb-2">₹{saree.price}</p>
 
-            {saree.available ? (
+            {saree.isAvailable ? (
               <a
                 href={`https://wa.me/917013931155?text=I'm%20interested%20in%20${encodeURIComponent(
                   saree.title
