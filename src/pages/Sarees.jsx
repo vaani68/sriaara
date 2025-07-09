@@ -6,7 +6,7 @@ function Sarees() {
   const [sarees, setSarees] = useState([]);
 
   useEffect(() => {
-    const imports = import.meta.glob('/content/sarees/*.md', { as: 'raw' });
+    const imports = import.meta.glob('/content/sarees/*.md', { query: '?raw', import: 'default' });
 
     const loadSarees = async () => {
       const entries = await Promise.all(
