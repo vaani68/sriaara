@@ -1,3 +1,4 @@
+// src/Pages/Sarees.jsx
 import React, { useEffect, useState } from 'react';
 import matter from 'gray-matter';
 
@@ -5,7 +6,7 @@ function Sarees() {
   const [sarees, setSarees] = useState([]);
 
   useEffect(() => {
-    const imports = import.meta.glob('../../../content/sarees/*.md', { as: 'raw' });
+    const imports = import.meta.glob('/content/sarees/*.md', { as: 'raw' });
 
     const loadSarees = async () => {
       const entries = await Promise.all(
