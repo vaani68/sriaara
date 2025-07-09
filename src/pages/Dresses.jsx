@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import matter from 'gray-matter';
-
+import fm from 'front-matter';
 function Dresses() {
   const [dresses, setDresses] = useState([]);
 
@@ -11,7 +10,7 @@ function Dresses() {
       const entries = await Promise.all(
         Object.entries(imports).map(async ([path, load]) => {
           const raw = await load();
-          const { data } = matter(raw);
+          const { attributes: data } = fm(raw);
           return data;
         })
       );
