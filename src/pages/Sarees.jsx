@@ -13,10 +13,12 @@ function Sarees() {
         Object.entries(imports).map(async ([path, load]) => {
           const raw = await load();
           const { data } = matter(raw);
+          console.log('Loaded Saree:', path, data);
           return data;
         })
       );
 
+      console.log('All sarees parsed:', entries);
       setSarees(entries);
     };
 
